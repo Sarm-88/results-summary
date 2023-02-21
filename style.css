@@ -170,8 +170,7 @@ main {
     font-size: 1.125rem;
     background-color: var(--dark-gray-blue);
     color: var(--white);
-    transition: background 300ms ease;
-    transition: transform 100ms ease;
+    transition: background-color 300ms ease, transform 100ms ease;
 }
 
 .continue:hover {
