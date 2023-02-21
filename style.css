@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 1);
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+
+    --light-gray: hsl(0 0% 100% / 75%)
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--white);
+    display: flex;
+    place-content: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    color: var(--light-gray);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.result {
+    background: linear-gradient(180deg, var(--light-slate-blue) 0%, var(--violet-blue) 100%);
+    border-radius: 0 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.725rem 2.5rem;
+    gap: 1rem;
+}
+
+.result > .title {
+    font-size: 1.125rem;
+}
+
+.result > .score-container {
+    background: linear-gradient(0deg, var(--light-slate-blue) 0%, var(--violet-blue) 100%);
+    padding: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    width: 8rem;
+    height: 8rem;
+}
+
+.result > .score-container > .score {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.result > .rating {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.summary {
+    color: var(--dark-gray-blue);
+    background-color: var(--white);
+    display: grid;
+    padding: 1rem 2rem;
+    gap: .725rem;
+    flex-grow: 1;
+    max-height:fit-content;
+}
+
+.summary > .title {
+    font-size: 1.5rem;
+}
+
+.summary > .card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary .category {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.red {
+    color: var(--light-red);
+}
+
+.yellow {
+    color: var(--orangey-yellow);
+}
+
+.greeen {
+    color: var(--green-teal);
+}
+
+.blue {
+    color: var(--cobalt-blue);
+}
