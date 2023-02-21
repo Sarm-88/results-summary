@@ -45,15 +45,16 @@ html, body {
 body {
     background-color: var(--white);
     display: flex;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     font-family: "Hanken Grotesk", sans-serif;
     color: var(--light-gray);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
+    display: grid;
+    /* flex-direction: column; */
+    height: 100%;
 }
 
 .result {
@@ -61,6 +62,7 @@ main {
     border-radius: 0 0 2rem 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1.725rem 2.5rem;
@@ -98,7 +100,7 @@ main {
     background-color: var(--white);
     display: grid;
     padding: 1rem 2rem;
-    gap: .725rem;
+    gap: 1rem;
     flex-grow: 1;
     max-height:fit-content;
 }
@@ -107,9 +109,30 @@ main {
     font-size: 1.5rem;
 }
 
-.summary > .card {
+.summary .card {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: hsl(0 100% 0% / 40%);
+    margin-bottom: 1rem;
+}
+
+.summary #card-1 {
+    background-color: hsl(0 100% 67% / 5%);
+}
+
+.summary #card-2 {
+    background-color: hsl(3 100% 56% / 5%);
+}
+
+.summary #card-3 {
+    background-color: hsl(166 100% 37% / 5%);
+}
+
+.summary #card-4 {
+    background-color: hsl(234 85% 45% / 5%);
 }
 
 .summary .category {
@@ -134,4 +157,51 @@ main {
 
 .blue {
     color: var(--cobalt-blue);
+}
+
+.summary span {
+    color: var(--dark-gray-blue);
+}
+
+.continue {
+    border: none;
+    border-radius: 100vw;
+    padding: .725rem;
+    font-size: 1.125rem;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    transition: background 300ms ease;
+    transition: transform 100ms ease;
+}
+
+.continue:hover {
+    background-color: var(--violet-blue);
+}
+
+.continue:active {
+    transform: translateY(2px);
+}
+
+@media (min-width: 600px) {
+    body {
+        margin: 0rem 1rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+        height: auto;
+        border-radius: 2rem;
+        box-shadow: 30px 30px 50px var(--pale-blue);
+    }
+
+    .result {
+        border-radius: 2rem;
+        background-color: red;
+        max-width: 20rem;
+    }
+
+    .summary {
+        border-radius: 2rem;
+    }
 }
